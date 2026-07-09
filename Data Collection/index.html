@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rising Waters - Flood Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Rising Waters: Flood Prediction Dashboard</h1>
+    </header>
+    <div class="container">
+        <h2>Enter Weather Parameters</h2>
+        <form action="/predict" method="POST">
+            <label>Subdivision / Region:</label>
+            <input type="text" name="region" required placeholder="e.g., KERALA">
+            
+            <label>Year:</label>
+            <input type="number" name="year" required placeholder="e.g., 2026">
+            
+            <label>Annual Rainfall (mm):</label>
+            <input type="number" name="rainfall" required placeholder="e.g., 2500">
+            
+            <button type="submit">Predict Flood Risk</button>
+        </form>
+    </div>
+</body>
+</html>
 
